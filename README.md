@@ -1,9 +1,9 @@
-#Electron Launch Data Scraper
+# Electron Launch Data Scraper
 
-##Overview
+## Overview
 This script scrapes the list of Electron launches from the Wikipedia page and processes the data into a clean CSV file. It uses requests, BeautifulSoup, and pandas for web scraping and data manipulation.
 
-##Prerequisites
+## Prerequisites
 Beautifulsoup
 
 The script generates two CSV files:
