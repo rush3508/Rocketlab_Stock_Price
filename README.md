@@ -10,11 +10,3 @@ Python script that scrapes the list of Electron launches from the Wikipedia page
 * Acquire NASDAQ Data: Download historical NASDAQ index data.
 * Merge NASDAQ Data with Existing Data: Merge the NASDAQ index data with the existing merged DataFrame.
 * Analyze Correlation: Calculate and analyze the correlation between the NASDAQ index and Rocket Lab's stock price changes.
-
-## Prerequisites
-Beautifulsoup
-
-The script generates two CSV files:
-
-electron_launches.csv: Contains the raw data extracted from Wikipedia.
-electron_launches_cleaned_final.csv: Contains the cleaned and validated data.
