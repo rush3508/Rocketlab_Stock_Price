@@ -1,0 +1,182 @@
+FlightNo.,Name,Date/time(UTC),Launch site,Payload,Payload Mass,Destination,Customer(s),Launch outcome,Booster recovery
+Flight No.,Name,Date/time(UTC),Launch site,Payload,Payload mass,Destination,Customer(s),Launch outcome,Booster recovery
+1,"""It's a Test""","25 May 2017, 04:20[3]","Mahia, LC-1A",None,None,"500 km, 85°LEO",Rocket Lab(flight test),Failure,No attempt
+"The rocket successfully launched and performed first stage separation and fairing separation. After reaching an altitude of about 224 kilometres (139 mi) (planned 500 kilometres (310 mi) at 85°inclination),[9]the telemetry feed to the range safety officer was lost and the rocket was destroyed byrange safety officer.[4][5]Post-flight analysis determined the issue to be a simple ground software failure rather than a problem with the rocket.[4]The ground software issue was found to be a contractor's failure to enableforward error correctionon their hardware leading to data corruption.[4][5]Rocket Lab made no changes to the Electron vehicle and instead implemented adjustment to procedures to prevent similar problems.[4]",,,,,,,,,
+2,"""Still Testing""","21 January 2018, 01:43[6]","Mahia, LC-1A",Dove PioneerLemur-2× 2Humanity Star[10],13 kg (29 lb)[11],"400 km, 82.9°LEO",Planet LabsSpire Global,Success,No attempt
+"CarryingCubeSatsforPlanet LabsandSpire Global.[12]The twoLemur-2 satelliteswere put into a circularized orbit by the new ""Electron kick stage"" which was not announced until after the launch.[13]Between December 2017 and January 2018 the launch was delayed six times due to weather, orbital traffic, rocket, and range safety issues.[14][15][16][17]Put Lemur-2 payloads into 500 km (310 mi) high orbit at 85.0°inclinationwhile the Dove Pioneer satellite was put into a 289 km (180 mi) x 533 km (331 mi).[9][18]",,,,,,,,,
+3,"""It's Business Time""[19]","11 November 2018, 03:50","Mahia, LC-1A[19][20]",Lemur-2× 2CICERO[21]IRVINE01[22]NABEO[22]Proxima× 2[23],Approx 45 kilograms (99 lb)[11],"500 km, 85°LEO",Spire GlobalGeoOpticsIrvine CubeSat STEM ProgramHigh Performance Space Structure SystemsFleet Space Technologies,Success,No attempt
+"The 11 November 2018 launch was successful; all cubesats planned to be deployed were deployed in orbit. The launch, originally planned for April 2018, had been delayed several times: to June/July after unusual behavior was identified in a motor controller during a wet dress rehearsal,[19][22]by a few days after a ground tracking antenna issue in the Chatham Island tracking station[24]and indefinitely after another motor controller issue.[25][26]In October 2018, a nine-day launch window was announced starting 11 November 2018.[27]",,,,,,,,,
+4,"""This One's ForPickering""[28]","16 December 2018, 06:33[7]","Mahia, LC-1A",ELaNa-19ALBusCeREsCHOMPTTCubeSailDaVinciISXNMTSatRSat-PShields-1STF-1SHFT2TOMSatEagleScoutTOMSat R3,78 kg (172 lb)[29],"500 km, 85°LEO",NASA[30],Success,No attempt
+Multiple CubeSats for the NASA-sponsored ELaNa-19 mission.[30]They were deployed from RailPOD dispensers. Was the first NASA mission for Rocket Lab.[8],,,,,,,,,
+Flight No.,Name,Date/time(UTC),Launch site,Payload,Payload Mass,Destination,Customer(s),Launch outcome,Booster recovery
+5,"""Two Thumbs Up""[31]","28 March 2019, 23:27[31]","Mahia, LC-1A",R3D2[32],150 kg (330 lb)[33],"425 km, 39.5°LEO",DARPA,Success,No attempt
+"Radio Frequency Risk Reduction Deployment Demonstration (R3D2) will qualify a new type of membrane reflectarray antenna.[34]Northrop Grummanserves as the prime contractor for R3D2. Blue Canyon Technologies provided the satellite bus, MMA Design provided the antenna.[35]",,,,,,,,,
+6,"""That's a Funny Looking Cactus""[36]","5 May 2019, 06:00[37]","Mahia, LC-1A",STP-27RDSPARC-1Falcon ODEHarbinger,180 kilograms (400 lb)[37],"500 km, 40°LEO",U.S. Air Force,Success,No attempt
+"Launch is part of the ""Rapid Agile Launch Initiative"" (RALI) for the U.S. Air Force.[38]Was first night launch of an Electron and its heaviest payload up to the time.[39]",,,,,,,,,
+7,"""Make it Rain""","29 June 2019, 04:30[40]","Mahia, LC-1A",BlackSky Global 3Prometheusx 2ACRUX-1SpaceBEE8 and 9Painani 1[41][42][43],80 kilograms (180 lb)[44],"450 km, 45°LEO",BlackSky viaSpaceflight Inc.USSOCOMMelbourne Space ProgramSwarm TechnologiesSEDENA,Success,No attempt
+BlackSky Global 3 is part of a constellation of Earth-observing satellites.[42][43]SpaceBEEcubesats are manufactured bySwarm Technologiesto test two-way satellite communication and data relay. SpaceBEE 8 weighs 0.4 kg (0.88 lb) while SpaceBEE 9 weighs 0.7 kg (1.54 lb).[45][46],,,,,,,,,
+8,"""Look Ma, No Hands""","19 August 2019, 12:12[47]","Mahia, LC-1A",Breizh Recon Orbiter (BRO-1)BlackSky Global 4Experimental Satellites x 2[48],Approx. 80 kilograms (180 lb)[11],"510 km, 94.8°LEO",UnseenLabsBlackSky viaSpaceflight Inc.AFSPC,Success,No attempt
+"Breizh Recon Orbiter (BRO-1) is part of a constellation used for tracking maritime vessels. BlackSky Global 4 is part of a constellation of Earth-observing satellites. The two experimental satellites for Air Force Space Command are part of the ""Pearl White"" technology demonstration program.[48][49]",,,,,,,,,
+9,"""As the Crow Flies""","17 October 2019, 01:22[50]","Mahia, LC-1A",Palisade[51],Approx. 20 kilograms (44 lb)[11],"1200 km, 87.9°LEO",Astro Digital[52],Success,No attempt
+"Palisade is a 16U CubeSat technology demonstrator satellite.[51]An upgraded, bi-propellant kick stage lifted the satellite to a 1200 km circular orbit, and then deorbited itself.[53]",,,,,,,,,
+10,"""Running Out Of Fingers""","6 December 2019, 08:18[54][55]","Mahia, LC-1A",ATL-1Fossasat-1NOOR-1A(Unicorn 2B)NOOR-1B(Unicorn 2C)SMOG-PTRSI SatALE-2[55],Approx. 77 kilograms (170 lb)[11],"385 x 400 km, 97°LEO","Advanced Technology of LaserFossa SystemsStara SpaceBudapest University of Technology and EconomicsACME AtronOmaticALE Co., LTD",Success,Controlled (atmosphere test)
+"ATL-1 teststhermal insulationin space. FossaSat-1 is a communications satellite that uses low-power radio frequencies to provideinternetconnectivity. NOOR-1A and NOOR-1B demonstrated intersatellite link technology. SMOG-P uses aspectrum analyzerto measureelectromagnetic pollution. TRSI Sat providesflight trackingservices.ALE-2creates artificial shooting star displays.[55]The six satellites other thanALE-2arePocketQubes, forming Alba Cluster 2 ofAlba Orbital.This mission also was the first guided, full telemetry re-entry of the Electron launch vehicle's first stage as part ofRocket Lab's plans to re-use and re-fly rocket boosters in future missions. Recovery instrumentation on-board this flight included guidance and navigation hardware, includingS-bandtelemetry and on-board flight computer systems, to live-gather data during the first stage'satmospheric re-entry, as well as areaction control systemto orient the booster.[56][57]After the launch Rocket Lab said that the reusability tests were successful.[58]First flight of Electron with a fullyautonomous flight termination systemon the rocket.[59]",,,,,,,,,
+FlightNo.,Name,Date/time(UTC),Launch site,Payload,Payload Mass,Destination,Customer(s),Launch outcome,Booster recovery
+11,"""Birds of a Feather""","31 January 2020, 02:56[60]","Mahia, LC-1A",NROL-151,Classified,"590 km x 610 km, 70.9°LEO",National Reconnaissance Office,Success,Controlled (atmosphere test)
+"First launch for theNational Reconnaissance Office(NRO). The NRO competitively awarded the contract under the Rapid Acquisition of a Small Rocket (RASR) contract vehicle. RASR allows the NRO to explore new launch opportunities that can provide a streamlined, commercial approach for getting small satellites into space. For the second time, theElectronbooster survived atmospheric re-entry.Rocket Labagain said that their reusability test was successful.[60]",,,,,,,,,
+12,"""Don't Stop Me Now""","13 June 2020,05:12:12[61]","Mahia, LC-1A","Classified payloads x 3 (USA-301, 302, 303) (NRO)ANDESITERAAF M2PF (Pathfinder)",Classified,"570*590 km, 97.75°LEO","NRO,Boston University/NASAandUniversity of New South Wales Canberra Spaceand theRoyal Australian Air Force.[62]",Success,No attempt[63]
+"Part of theELaNa 32mission,ANDESITEis a satellite designed to studyEarth's magnetic field. The M2 Pathfinder satellite will be a technology demonstration satellite to test communications. The flight will also carry three payloads for the NRO.[64][65]Rocket Lab does not plan to do any recovery testing.[65]Flight delayed due toCOVID-19.[64]A launch attempt on 11 June 2020 was canceled due to bad weather.[66]ANDESITE consists of ANDESITE Mule, a 6U parent spacecraft, and ANDESITE Node 1 to Node 8, small magnetometer subsatellites to be ejected from it to study magnetospheric variation. Each Node is 0.20 x 0.10 x 0.025 m in size with a mass of 0.38 kg.[62]",,,,,,,,,
+13,"""Pics Or It Didn't Happen""",4 July 202021:19:36,"Mahia, LC-1A",CE-SAT-IBSuperDove x 5Faraday 1,Approx. 75 kg (165 lb),"500 km, 97.5°SSO",Canon ElectronicsPlanet LabsIn-Space Missions,Failure,No attempt[67]
+"Flight No. 13's name was ""Pics Or It Didn't Happen"".[2]The 5 SuperDoves were part of Planet's Flock 4e.[68]Flight failed during 2nd stage burn.[69][70]The issue was found to be a single faulty electrical connection that was not caught during preflight testing. The wiring was intermittently secure leading to increasing resistance causing heating and thermal expansion. This caused softening ofpotting compoundsaround the connection leading to a disconnect. The disconnect lead to power being cut from the electricturbopumpsneeded for theRutherfordengine leading the engine to be shut down.[71]No changes were made to the vehicle but changes were made to ""work instructions and quality signoffs"".[72]",,,,,,,,,
+14,"""I Can't Believe It's Not Optical""",31 August 202003:05:47[73],"Mahia, LC-1A",SequoiaPhoton(First Light),100 kg,"500 km, 45°LEO",Capella Space,Success,No attempt[67]
+"Return to flight of Electron after the 4 July 2020 launch failure.[74][75]Launch of asynthetic-aperture radar(SAR) satellite, for global imagery.[76]Also launched thePhoton satellite bus.[77]",,,,,,,,,
+15,"""In Focus""[78]",28 October 202021:21:27[79],"Mahia, LC-1A",SuperDove x 9CE-SAT-IIB,72 kg,"500 km, 97.5°SSO","Planet LabsSpaceflight, Inc.forCanon Electronics",Success,No attempt[67]
+After satellite deployed kick stage changed orbital inclination.[80],,,,,,,,,
+16,"""Return To Sender""[81]",20 November 202002:20:01[79],"Mahia, LC-1A",Dragracer ADragracer BBRO-2BRO-3APSS-1 (Te Waka Āmiorangi o Aotearoa) (Auckland Program for Space Systems)SpaceBEE x 24Gnome Chompski (mass simulator),200 kg,"500 km, 97.3°SSO","TriSept Corp.UnseenLabsTe Pūnaha Ātea - Auckland Space Institute, The University of AucklandSwarm TechnologiesGabe Newell",Success,Success (Ocean landing)
+First Electron to attempt a soft ocean landing by parachute with the booster and recovery by vessel.[82],,,,,,,,,
+17,"""The Owl's Night Begins""[83]",15 December 202010:09:27[84],"Mahia, LC-1A",StriX-α,150 kg,"500 km, 97.3°SSO",Synspective,Success,No attempt
+Test satellite weighing 150 kg (330 lb) usingsynthetic-aperture radar(SAR) from a Japanese company. Part of a future constellation of 25 satellites to provide global coverage. Satellite was encompassed in an expanded fairing.[85],,,,,,,,,
+FlightNo.,Name,Date/time(UTC),Launch site,Payload,Payload Mass,Destination,Customer(s),Launch outcome,Booster recovery
+18,"""Another One Leaves The Crust""",20 January 202107:26:00[86],"Mahia, LC-1A",GMS-T[87],~50 kg,"1200 km, 90°LEO",OHB,Success,No attempt
+"Dedicated mission for OHB, the launch occurred six months after the contract signing withRocket Laband OHB.[88]",,,,,,,,,
+19,"""They Go Up So Fast""",22 March 202122:30[89],"Mahia, LC-1A","BlackSky Global 9Centauri 3Myriota 7Veery HatchlingRAAF-M2 A, BGunsmoke-JPhoton(Pathstone)[90]",Unknown,"450 km and 550km, 45°LEO",BlackSky viaSpaceflight Inc.Fleet SpaceMyriotaCare Weather TechnologiesUniversity of New South Wales Canberra Space(USASMDC)Rocket Lab,Success[89],No attempt
+"During this mission, Rocket Lab deployed their 100th satellite to orbit. As well as their secondPhoton satellite busnamed Pathstone. Photon Pathstone will operate on orbit as a risk reduction demonstration to build spacecraft heritage ahead of Rocket Lab's mission to the Moon for NASA later this year, as well as Rocket Lab's private mission to Venus in 2025.[89]",,,,,,,,,
+20,"""Running Out Of Toes""",15 May 202111:11[91],"Mahia, LC-1A","BlackSky-10, BlackSky-11",120 kg,"430 km, 50°LEO","BlackSky viaSpaceflight Industries, Inc.",Failure[92][93],Success (Ocean landing)[94]
+"Second launch to attempt booster recovery (via ocean landing), using an advanced heat shield based on lessons learned from the first recoveredElectronbooster.[95]First of four 2021 launches to carry twoBlackSky GlobalGen 2 satellites.[96]Second stage engine shut down early causing the mission to be lost, but Electron's first stage safely completed a successful splashdown under parachute. The investigation revealed that the second stage igniter fault induced an interference with the engine controller that caused the data signal corruption for thethrust vector control (TVC)system, straying the vehicle off course.[97]",,,,,,,,,
+21,"""It's A Little Chile Up Here""",29 July 202106:00[98],"Mahia, LC-1A",Monolith,Unknown,"600 km, 37°LEO",U.S. Space Force,Success,No attempt
+"The launch was originally scheduled to fly fromLC-2in Wallops in 2020, but NASA didn't certify the autonomous flight termination system (AFTS) in time.[99]Because of these delays, the launch was moved to LC-1 as the return to flight after the anomaly Electron experienced during the ""Running Out Of Toes"" mission in May 2021.",,,,,,,,,
+22,"""Love At First Insight""",18 November 202101:38:13[100][101],"Mahia, LC-1A","BlackSky-14, BlackSky-15",120 kg,"430 km, 42°LEO",BlackSky viaSpaceflight Inc.,Success,Success (Ocean landing)[102]
+"Second of four launches to carry two BlackSky Global Gen 2 satellites in 2021. Mission was named ""Love At First Insight"". The first stage booster performed a soft ocean splashdown under parachute. For the first time, a helicopter tracked and observed Electron's descent in preparation for future missions which aim to use helicopters to intercept and capture returning launch vehicle boosters mid-air as they return to Earth under parachute. The launch vehicle also flew with an advanced parachute deployed from the first stage at a higher altitude then previous recovery attempts and an improved heat shield.[103]",,,,,,,,,
+23,"""A Data With Destiny""",9 December 2021 00:02[104],"Mahia, LC-1A","BlackSky-12 Gen-2, BlackSky-13 Gen-2",120 kg,"430 km, 42°LEO",BlackSky viaSpaceflight Inc.,Success,No attempt
+Third of four launches to carry two BlackSky Global Gen 2 satellites in 2021.[101]This mission set a new turnaround record between Electron launches at just20 days.,,,,,,,,,
+FlightNo.,Name,Date/time(UTC),Launch site,Payload,Payload Mass,Destination,Customer(s),Launch outcome,Booster recovery
+24,"""The Owl's Night Continues""",28 February 202220:37[105],"Mahia, LC-1B",StriX-β,~150 kg,"561 km, 97°SSO",Synspective,Success,No attempt
+Inaugural launch fromLaunch Complex 1 Pad B. First of three dedicated launches for Synspective's StriX constellation.[106],,,,,,,,,
+25,"""Without Mission A Beat""",2 April 202212:41[107],"Mahia, LC-1A","BlackSky-14 Gen-2, BlackSky-15 Gen-2",~120 kg,"430 km, 53°LEO",BlackSky viaSpaceflight Inc.,Success,No attempt
+Last of four launches to carry twoBlackSky GlobalGen 2 satellites in 2021 and 2022.,,,,,,,,,
+26,"""There And Back Again""",2 May 202222:49[108],"Mahia, LC-1A",TRSI-2 & TRSI-3MyRadar-1Unicorn-2CopiaAuroraSat-1E-Space Demo (3 satellites)SpaceBEE (24 satellites)BRO-6,Unknown,"520 km, 94°SSO",Alba OrbitalAstrix AstronauticsAurora Propulsion TechnologiesE-SpaceSwarm TechnologiesviaSpaceflight Inc.UnseenLabs,Success,Partial failure (aerial capture)
+"Deployed 34 satellites for six customers. First mid-air helicopter capture attempt of anElectronfirst stage following launch. Electron was initially captured by the helicopter, but the pilot detected different load characteristics than previously experienced in testing and offloaded the stage for a splashdown, where it was recovered byRocket Lab's contracted offshore vessel, Seaworker as in previous ocean landings.[108]",,,,,,,,,
+27,"""CAPSTONE""",28 June 202209:55[109],"Mahia, LC-1B",CAPSTONEPhoton,80 kg,TLItoNRHO,NASARocket Lab,Success,No attempt
+"Cislunar Autonomous Positioning System Technology Operations and Navigation Experiment (CAPSTONE) is aCubeSatmission that will serve as a precursor for the plannedGateway. It usedPhotonto place CAPSTONE on a trajectory to the Moon. CAPSTONE will move into anear-rectilinear halo orbit(NRHO) after separation from Photon.[110]Due to the heavy nature of the payload, the first stage was stripped down to its bare frame with no recovery hardware and no cameras. The recovery hardware itself takes about 10-15% of the payload mass capabilities of a given launch.[111]",,,,,,,,,
+28,"""Wise One Looks Ahead"".",13 July 202206:30[112],"Mahia, LC-1A",NROL-162(RASR-3)[113],Classified,"620 km, 40°LEO",NRO,Success,No attempt
+"First of two ""Responsive Space Missions"" NRO launches. Back to back launches between Pad A and B.[113]",,,,,,,,,
+29,"""Antipodean Adventure""",4 August 202205:00[114],"Mahia, LC-1B",NROL-199(RASR-4),Classified,"620 km, 70°LEO",NRO,Success,No attempt
+"Second of two ""Responsive Space Missions"" NRO launches. Back to back launches between Pad A and B.[113]",,,,,,,,,
+30,"""The Owl Spreads Its Wings""",15 September 202220:38[115],"Mahia, LC-1B",StriX-1,~100 kg,"563 km, 97°SSO",Synspective,Success,No attempt
+"Second of three dedicated launches for Synspective's StriX constellation named ""The Owl Spreads Its Wings"". StriX-1 is the 150th satellite deployed by Rocket Lab.[116]",,,,,,,,,
+31,"""It Argos Up From Here""",7 October 202217:09[117],"Mahia, LC-1B",GAzelle (Argos-4)[118],118 kg,750 km 98°SSO,NOAA/CNES,Success,No attempt
+First launch forGeneral Atomics Electromagnetic Systems. The GAzelle satellite carries the Argos-4Advanced Data Collection Systemhosted payload.[119],,,,,,,,,
+32,"""Catch Me If You Can""",4 November 202217:27[120],"Mahia, LC-1B",MATS,50 kg,"585 km, 97.66°SSO",SNSA&OHB Sweden,Success,Partial failure (aerial capture)
+"Launch of MATS atmospheric research satellite for the Swedish National Space Agency. Second attempt at mid-air helicopter recovery of first stage, however due to telemetry loss from the first stage during its descent, it was not safe for the helicopter to loiter in the capture zone, so it backed off. Stage made a soft ocean landing and was recovered by Rocket Lab's contracted offshore vessel, Seaworker as in previous ocean landings.[121]",,,,,,,,,
+FlightNo.,Name,Date/time(UTC),Launch site,Payload,Payload Mass,Destination,Customer(s),Launch outcome,Booster recovery
+33,"""Virginia Is For Launch Lovers""",24 January 202323:00[122],"MARS,LC-2",HawkEye 360 Cluster 6(3 satellites)[123],40 kg,"550 km, 40.5°LEO",HawkEye 360,Success,No attempt
+First launch from Launch Complex 2 at theMid-Atlantic Regional Spaceportin Wallops. Launch of the first 3 of the 15 satellites contracted with HawkEye 360.[124],,,,,,,,,
+34,"""Stronger Together""",16 March 2023 22:39[125],"MARS,LC-2","Capella 9, Capella 10",224 kg,"600 km, 44°LEO",Capella Space,Success,No attempt
+Dedicated launch for Capella Space.,,,,,,,,,
+35,"""The Beat Goes On""",24 March 2023 09:14[126],"Mahia, LC-1B","BlackSky-18 Gen-2, BlackSky 19 Gen-2",~120 kg,"450 km, 42°LEO",BlackSky viaSpaceflight Inc.,Success,Success (Ocean landing)
+Dedicated launch for BlackSky.,,,,,,,,,
+36,"""Rocket Like A Hurricane""",8 May 2023 01:00[127],"Mahia, LC-1B",TROPICS× 2,10 kg,"550 km, 32°LEO",NASA,Success,No attempt
+"First of twoTROPICSmissions awarded toRocket Labafter a prior mission awarded to competing launch providerAstrafailed to orbit.[128]The TROPICS mission consists of four (formerly six) CubeSats intended for two (formerly three)low-Earthorbital planesat an inclination of 30 degrees. Due to the light weight of the payload and the target orbit, the second stage completed the orbital insertion while the kick stage was used to perform a plane change burn to the target inclination.",,,,,,,,,
+37,"""Coming to a Storm Near You""",26 May 2023 03:46[129],"Mahia, LC-1B",TROPICS× 2,10 kg,"550 km, 32°LEO",NASA,Success,No attempt
+Second of twoTROPICSmissions awarded to Rocket Lab after a prior mission awarded to competing launch providerAstrafailed to orbit.[128],,,,,,,,,
+39,"""Baby Come Back""",18 July 2023 01:27[130],"Mahia, LC-1B",LEO 3Lemur-2× 2Starling × 4,~86 kg[131],"1000 km, 99.45°SSO",TelesatSpire GlobalNASA,Success,Success (Ocean landing)
+"The LEO 3 demonstration satellite will provide continuity for customer and ecosystem vendor testing campaigns following the decommissioning of Telesat's Phase 1 LEO satellite. This mission tested out new reusability technologies, including improved water sealing, a lighter parachute, and new hardware on the recovery vessel.[132]",,,,,,,,,
+40,"""We Love The Nightlife""",23 August 2023 23:45[133],"Mahia, LC-1B",Acadia 1,~165 kg,"640 km, 53°LEO",Capella Space,Success,Success (Ocean landing)[134]
+"First of four dedicated launches for Capella Space with Acadia satellites. For the first time on this mission, Rocket Lab is reusing a Rutherford engine from another mission launched in May 2022 ""There And Back Again"".[135]",,,,,,,,,
+41,"""We Will Never Desert You""",19 September 2023 06:55[136],"Mahia, LC-1B",Acadia 2[137],~165 kg,"640 km, 53°LEO",Capella Space,Failure,No attempt
+"Second of four dedicated launches for Capella Space with Acadia satellites.[135]An anomaly occurred after stage separation, which resulted in a failure to orbit. Due to a sharp change of voltage from 420V to 508V due to an arc leading to a short in the power system that is used for motor controls caused in the near vacuum of space as a result of phenomenon ofPaschen's lawin T+151 to T+152.66 seconds.[138]",,,,,,,,,
+42,"""The Moon God Awakens""",15 December 2023 04:05[139],"Mahia, LC-1B",QPS-SAR-5 (TSUKUYOMI-I),~100 kg,"575 km, 42°LEO",iQPS,Success,No attempt
+"The satellite was previously manifested as aLauncherOnepayload. AfterVirgin Orbit'sbankruptcyand shutdown, the payload was transferred toElectron.[140]This mission was Electron's return to launch after a failure due to a second stage issue occurring in the previous mission (""We Will Never Desert You"") on September 19.[141]",,,,,,,,,
+FlightNo.,Name,Date/time(UTC),Launch site,Payload,Payload Mass,Destination,Customer(s),Launch outcome,Booster recovery
+43,"""Four Of A Kind""",31 January 202406:34[142],"Mahia, LC-1B",Skylark × 4,~112 kg[143],"530 km, 97°LEO",Spire Globaland NorthStar Earth & Space,Success,Success (Ocean landing)
+Dedicated launch forSpire Global.,,,,,,,,,
+44,"""On Closer Inspection""",18 February 202414:52[144],"Mahia, LC-1B",ADRAS-J,150 kg,"600 km, 98°SSO",Astroscale,Success,No attempt
+"The Active Debris Removal by Astroscale-Japan (ADRAS-J) satellite willrendezvouswith a spent Japanese upper stage launch vehicle body in low Earth orbit and demonstrate proximity operations in preparation for a future de-orbiting mission. Due to the special mission requirements, Electron had a near instantaneous launch window.[145]",,,,,,,,,
+45,"""Owl Night Long""",12 March 202415:03[146],"Mahia, LC-1B",StriX-3,100 kg,"561 km, 97°SSO",Synspective,Success,No attempt
+Third of three dedicated launches for Synspective's StriX constellation.,,,,,,,,,
+46,"""Live and Let Fly""",21 March 202407:25[147],"MARS,LC-2",NROL-123 (4 Payloads)[148],Classified,LEO,National Reconnaissance Office(NRO),Success,No attempt
+"The NROL-123 mission, wasRocket Lab’s first launch for the NRO from the United States after previously launching four NRO missions from Launch Complex 1 on New Zealand’s Mahia Peninsula.",,,,,,,,,
+47,"""Beginning Of The Swarm""",23 April 202422:32[149],"Mahia, LC-1B",NeonSat-1ACS3,~115 kg,"520 km Neonsat-1, 1.000km ACS3, 97°SSO",KAISTNASA,Success,No attempt
+Rideshare mission including NASA'sAdvanced Composite Solar Sail System (ACS3).,,,,,,,,,
+48,"""Ready, Aim, PREFIRE""",25 May 202407:41[150],"Mahia, LC-1B",PREFIRE 1,~15 kg,525 km 97.5°SSO,NASA,Success,No attempt
+First of two launches for NASA's PREFIRE mission.,,,,,,,,,
+49,"""PREFIRE And Ice""",5 June 202403:15[151],"Mahia, LC-1B",PREFIRE 2,~15 kg,525 km 97.5°SSO,NASA,Success,No attempt
+Second of two launches for NASA's PREFIRE mission.,,,,,,,,,
+Date/time(UTC),Launch site,Payload,Planneddestination,Customer,,,,,
+20 June 202418:13[152],"Mahia, LC-1B",Kinéis × 5,LEO,Kinéis,,,,,
+"""No Time Toulouse"" Mission. First of five dedicated launches for Kinéis'IoTsatellite constellation.[153]",,,,,,,,,
+26 June 2024[154],"Mahia, LC-1",Acadia × 1,LEO,Capella Space,,,,,
+Third of four dedicated launches for Capella Space with Acadia satellites. Includes an option to move any of the missions to MARS LC-2.[135],,,,,,,,,
+2024[154],"Mahia, LC-1",Acadia × 1,LEO,Capella Space,,,,,
+Fourth of four dedicated launches for Capella Space with Acadia satellites. Includes an option to move any of the missions to MARS LC-2.[135],,,,,,,,,
+2024[155],"Mahia, LC-1",StriX,SSO,Synspective,,,,,
+Fourth of five dedicated launches for Synspective's StriX constellation.,,,,,,,,,
+2024[155],"Mahia, LC-1",StriX,SSO,Synspective,,,,,
+Fifth of five dedicated launches for Synspective's StriX constellation.,,,,,,,,,
+2024[156],"Mahia, LC-1",Hawk × 6,LEO,HawkEye 360,,,,,
+First of two dedicated launches for HawkEye 360.,,,,,,,,,
+2024[157],Unknown,Hawk × 6,LEO,HawkEye 360,,,,,
+Second of two dedicated launches for HawkEye 360.,,,,,,,,,
+NET 2024[158][159],"Mahia, LC-1",Kinéis × 5,LEO,Kinéis,,,,,
+Second of five dedicated launches for Kinéis'IoTsatellite constellation.[153],,,,,,,,,
+NET 2024[160][159],"Mahia, LC-1",Kinéis × 5,LEO,Kinéis,,,,,
+Third of five dedicated launches for Kinéis'IoTsatellite constellation.[153],,,,,,,,,
+NET 2024[160][159],"Mahia, LC-1",Kinéis × 5,LEO,Kinéis,,,,,
+Fourth of five dedicated launches for Kinéis'IoTsatellite constellation.[153],,,,,,,,,
+NET 2024[160][159],"Mahia, LC-1",Kinéis × 5,LEO,Kinéis,,,,,
+Fifth of five dedicated launches for Kinéis'IoTsatellite constellation.[153],,,,,,,,,
+NET 2024[161],"Mahia, LC-1",BlackSky Gen-3 × ?,LEO,BlackSky,,,,,
+First of five dedicated launches for BlackSky's 3rd generation satellites.,,,,,,,,,
+NET 2024[161],"Mahia, LC-1",BlackSky Gen-3 × ?,LEO,BlackSky,,,,,
+Second of five dedicated launches for BlackSky's 3rd generation satellites.,,,,,,,,,
+NET 2024[161],"Mahia, LC-1",BlackSky Gen-3 × ?,LEO,BlackSky,,,,,
+Third of five dedicated launches for BlackSky's 3rd generation satellites.,,,,,,,,,
+NET 2024[161],"Mahia, LC-1",BlackSky Gen-3 × ?,LEO,BlackSky,,,,,
+Fourth of five dedicated launches for BlackSky's 3rd generation satellites.,,,,,,,,,
+NET 2024[161],"Mahia, LC-1",BlackSky Gen-3 × ?,LEO,BlackSky,,,,,
+Fifth of five dedicated launches for BlackSky's 3rd generation satellites.,,,,,,,,,
+Date/time(UTC),Launch site,Payload,Planneddestination,Customer,,,,,
+NET 2025[162],"Mahia, LC-1",LOXSAT1,SSO,Eta Space,,,,,
+Cryogenic fluid management technology demonstration for a futurepropellant depot.,,,,,,,,,
+NET 2025[163],"Mahia, LC-1",Venus Life Finder[164],Heliocentric,Rocket Lab,,,,,
+"PrivateVenus explorationmission, using an atmospheric-entry probe developed jointly withMIT. APhotonrelay satellite will perform a flyby of Venus in order to relay the data from the atmospheric-entry probe.",,,,,,,,,
+NET 2025[165],"MARS,LC-2",DISKSat,VLEO,U.S. Space Force,,,,,
+"The mission, called Space Test Program-30 (STP-S30), is a launch scheduled to take place within 24 hours from contract award[165]to demonstrate Rocket Lab's responsive space program.",,,,,,,,,
+NLT fall 2025[166],LC-1orLC-2,Pioneerderived satellite,LEO,U.S. Space Force Space Systems Command,,,,,
+"Mission for SSC, Rocket Lab will build and launch a satellite for TacRS (Tactically Responsive Space). Once on orbit, the spacecraft will conduct a variety of dynamic space operations to demonstrate SDA characterization capabilities with True Anomaly’s spacecraft, the Jackal autonomous orbital vehicle.[167]",,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+1st of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+2nd of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+3rd of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+4th of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+5th of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+6th of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+7th of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+8th of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+9th of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+2025 - 2027,"Mahia, LC-1",(SAR) constellation,LEO,Synspective,,,,,
+10th of 10 dedicated launches for Synspective's synthetic aperture radar constellation[168],,,,,,,,,
+FlightNo.,Name,Date/time(UTC),Launch site,Payload,Payload Mass,Apogee,Customer(s),Launch outcome,Booster recovery
+38[169],"""Scout's Arrow""",18 June 2023 01:24[170],"MARS,LC-2",DYNAMO-A,Classified,Unknown,Dynetics,Success,No attempt
+Part of Multi-Service Advanced Capability Hypersonic Test Bed (MACH-TB) program.[170],,,,,,,,,
+Date/time(UTC),Launch site,Payload,Apogee,Customer,,,,,
+NET 2024,"MARS,LC-2",Unknown,Unknown,Leidos,,,,,
+First of four sub-Orbital launches for Leidos under the MACH-TB project.[171],,,,,,,,,
+NET 2024,"MARS,LC-2",Unknown,Unknown,Leidos,,,,,
+Second of four sub-Orbital launches for Leidos under the MACH-TB project.,,,,,,,,,
+NET 2024,"MARS,LC-2",Unknown,Unknown,Confidential,,,,,
+The launch deal was signed with a confidential customer just days after the first HASTE launch took place.[172],,,,,,,,,
+NET April 2025[173],"MARS,LC-2",DART AE,Unknown,DIU,,,,,
+"This mission will deploy a payload fromHypersonixcalled DART AE, DART AE is a scramjet-powered hypersonic vehicle capable of speeds up to Mach 7. This mission will also demonstrate HASTE's direct inject capabilities. Direct inject means that the payload will be deployed while the rocket is still ascending.[174]",,,,,,,,,
+NET 2025,"MARS,LC-2",Unknown,Unknown,Leidos,,,,,
+Third of four sub-Orbital launches for Leidos under the MACH-TB project.,,,,,,,,,
+NET 2025,"MARS,LC-2",Unknown,Unknown,Leidos,,,,,
+Fourth of four sub-Orbital launches for Leidos under the MACH-TB project.,,,,,,,,,

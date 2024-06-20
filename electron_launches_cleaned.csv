@@ -1,0 +1,49 @@
+FlightNo.,Name,Date/time(UTC),Launch site,Payload,Payload Mass,Destination,Customer(s),Launch outcome,Booster recovery,Cleaned Date/time(UTC)
+1,"""It's a Test""","25 May 2017, 04:20","Mahia, LC-1A",,,"500km, 85LEO",Rocket Lab(flight test),Failure,No attempt,2017-05-25 04:20:00
+2,"""Still Testing""","21 January 2018, 01:43","Mahia, LC-1A",Dove PioneerLemur-2 2Humanity Star,13 kg,"400 km, 82.9LEO",Planet LabsSpire Global,Success,No attempt,2018-01-21 01:43:00
+3,"""It's Business Time""","11 November 2018, 03:50","Mahia, LC-1A",Lemur-2 2CICEROIRVINE01NABEOProxima 2,45 kg,"500km, 85LEO",Spire GlobalGeoOpticsIrvine CubeSat STEM ProgramHigh Performance Space Structure SystemsFleet Space Technologies,Success,No attempt,2018-11-11 03:50:00
+4,"""This One's ForPickering""","16 December 2018, 06:33","Mahia, LC-1A",ELaNa-19ALBusCeREsCHOMPTTCubeSailDaVinciISXNMTSatRSat-PShields-1STF-1SHFT2TOMSatEagleScoutTOMSat R3,78 kg,"500km, 85LEO",NASA,Success,No attempt,2018-12-16 06:33:00
+5,"""Two Thumbs Up""","28 March 2019, 23:27","Mahia, LC-1A",R3D2,150 kg,"425km, 39.5LEO",DARPA,Success,No attempt,2019-03-28 23:27:00
+6,"""That's a Funny Looking Cactus""","5 May 2019, 06:00","Mahia, LC-1A",STP-27RDSPARC-1Falcon ODEHarbinger,180 kg,"500km, 40LEO",U.S. Air Force,Success,No attempt,2019-05-05 06:00:00
+7,"""Make it Rain""","29 June 2019, 04:30","Mahia, LC-1A",BlackSky Global 3Prometheusx 2ACRUX-1SpaceBEE8 and 9Painani 1,80 kg,"450 km, 45LEO",BlackSky viaSpaceflight Inc.USSOCOMMelbourne Space ProgramSwarm TechnologiesSEDENA,Success,No attempt,2019-06-29 04:30:00
+8,"""Look Ma, No Hands""","19 August 2019, 12:12","Mahia, LC-1A",Breizh Recon Orbiter (BRO-1)BlackSky Global 4Experimental Satellites x 2,80 kg,"510 km, 94.8LEO",UnseenLabsBlackSky viaSpaceflight Inc.AFSPC,Success,No attempt,2019-08-19 12:12:00
+9,"""As the Crow Flies""","17 October 2019, 01:22","Mahia, LC-1A",Palisade,20 kg,"1200km, 87.9LEO",Astro Digital,Success,No attempt,2019-10-17 01:22:00
+10,"""Running Out Of Fingers""","6 December 2019, 08:18","Mahia, LC-1A",ATL-1Fossasat-1NOOR-1A(Unicorn 2B)NOOR-1B(Unicorn 2C)SMOG-PTRSI SatALE-2,77 kg,"385 x 400km, 97LEO","Advanced Technology of LaserFossa SystemsStara SpaceBudapest University of Technology and EconomicsACME AtronOmaticALE Co., LTD",Success,Controlled (atmosphere test),2019-12-06 08:18:00
+11,"""Birds of a Feather""","31 January 2020, 02:56","Mahia, LC-1A",NROL-151,,"590km x 610km, 70.9LEO",National Reconnaissance Office,Success,Controlled (atmosphere test),2020-01-31 02:56:00
+12,"""Don't Stop Me Now""","13 June 2020,05:12:12","Mahia, LC-1A","Classified payloads x 3 (USA-301, 302, 303) (NRO)ANDESITERAAF M2PF (Pathfinder)",,"570*590 km, 97.75LEO","NRO,Boston University/NASAandUniversity of New South Wales Canberra Spaceand theRoyal Australian Air Force.",Success,No attempt,
+13,"""Pics Or It Didn't Happen""","4 July 2020, 21:19:36","Mahia, LC-1A",CE-SAT-IBSuperDove x 5Faraday 1,75 kg,"500 km, 97.5SSO",Canon ElectronicsPlanet LabsIn-Space Missions,Failure,No attempt,2020-07-04 21:19:36
+14,"""I Can't Believe It's Not Optical""","31 August 2020, 03:05:47","Mahia, LC-1A",SequoiaPhoton(First Light),100 kg,"500 km, 45LEO",Capella Space,Success,No attempt,2020-08-31 03:05:47
+15,"""In Focus""","28 October 2020, 21:21:27","Mahia, LC-1A",SuperDove x 9CE-SAT-IIB,72 kg,"500 km, 97.5SSO","Planet LabsSpaceflight, Inc.forCanon Electronics",Success,No attempt,2020-10-28 21:21:27
+16,"""Return To Sender""","20 November 2020, 02:20:01","Mahia, LC-1A",Dragracer ADragracer BBRO-2BRO-3APSS-1 (Te Waka miorangi o Aotearoa) (Auckland Program for Space Systems)SpaceBEE x 24Gnome Chompski (mass simulator),200 kg,"500 km, 97.3SSO","TriSept Corp.UnseenLabsTe Pnaha tea - Auckland Space Institute, The University of AucklandSwarm TechnologiesGabe Newell",Success,Success (Ocean landing),2020-11-20 02:20:01
+17,"""The Owl's Night Begins""","15 December 2020, 10:09:27","Mahia, LC-1A",StriX-,150 kg,"500km, 97.3SSO",Synspective,Success,No attempt,2020-12-15 10:09:27
+18,"""Another One Leaves The Crust""","20 January 2021, 07:26:00","Mahia, LC-1A",GMS-T,50 kg,"1200 km, 90LEO",OHB,Success,No attempt,2021-01-20 07:26:00
+19,"""They Go Up So Fast""","22 March 2021, 22:30","Mahia, LC-1A","BlackSky Global 9Centauri 3Myriota 7Veery HatchlingRAAF-M2 A, BGunsmoke-JPhoton(Pathstone)",,"450 km and 550km, 45LEO",BlackSky viaSpaceflight Inc.Fleet SpaceMyriotaCare Weather TechnologiesUniversity of New South Wales Canberra Space(USASMDC)Rocket Lab,Success,No attempt,2021-03-22 22:30:00
+20,"""Running Out Of Toes""","15 May 2021, 11:11","Mahia, LC-1A","BlackSky-10, BlackSky-11",120 kg,"430 km, 50LEO","BlackSky viaSpaceflight Industries, Inc.",Failure,Success (Ocean landing),2021-05-15 11:11:00
+21,"""It's A Little Chile Up Here""","29 July 2021, 06:00","Mahia, LC-1A",Monolith,,"600 km, 37LEO",U.S. Space Force,Success,No attempt,2021-07-29 06:00:00
+22,"""Love At First Insight""","18 November 2021, 01:38:13","Mahia, LC-1A","BlackSky-14, BlackSky-15",120 kg,"430 km, 42LEO",BlackSky viaSpaceflight Inc.,Success,Success (Ocean landing),2021-11-18 01:38:13
+23,"""A Data With Destiny""","9 December 2021, 00:02","Mahia, LC-1A","BlackSky-12 Gen-2, BlackSky-13 Gen-2",120 kg,"430 km, 42LEO",BlackSky viaSpaceflight Inc.,Success,No attempt,2021-12-09 00:02:00
+24,"""The Owl's Night Continues""","28 February 2022, 20:37","Mahia, LC-1B",StriX-,150 kg,"561 km, 97SSO",Synspective,Success,No attempt,2022-02-28 20:37:00
+25,"""Without Mission A Beat""","2 April 2022, 12:41","Mahia, LC-1A","BlackSky-14 Gen-2, BlackSky-15 Gen-2",120 kg,"430 km, 53LEO",BlackSky viaSpaceflight Inc.,Success,No attempt,2022-04-02 12:41:00
+26,"""There And Back Again""","2 May 2022, 22:49","Mahia, LC-1A",TRSI-2 & TRSI-3MyRadar-1Unicorn-2CopiaAuroraSat-1E-Space Demo (3 satellites)SpaceBEE (24 satellites)BRO-6,,"520 km, 94SSO",Alba OrbitalAstrix AstronauticsAurora Propulsion TechnologiesE-SpaceSwarm TechnologiesviaSpaceflight Inc.UnseenLabs,Success,Partial failure (aerial capture),2022-05-02 22:49:00
+27,"""CAPSTONE""","28 June 2022, 09:55","Mahia, LC-1B",CAPSTONEPhoton,80 kg,TLItoNRHO,NASARocket Lab,Success,No attempt,2022-06-28 09:55:00
+28,"""Wise One Looks Ahead"".","13 July 2022, 06:30","Mahia, LC-1A",NROL-162(RASR-3),,"620 km, 40LEO",NRO,Success,No attempt,2022-07-13 06:30:00
+29,"""Antipodean Adventure""","4 August 2022, 05:00","Mahia, LC-1B",NROL-199(RASR-4),,"620 km, 70LEO",NRO,Success,No attempt,2022-08-04 05:00:00
+30,"""The Owl Spreads Its Wings""","15 September 2022, 20:38","Mahia, LC-1B",StriX-1,100 kg,"563 km, 97SSO",Synspective,Success,No attempt,2022-09-15 20:38:00
+31,"""It Argos Up From Here""","7 October 2022, 17:09","Mahia, LC-1B",GAzelle (Argos-4),118 kg,750 km 98SSO,NOAA/CNES,Success,No attempt,2022-10-07 17:09:00
+32,"""Catch Me If You Can""","4 November 2022, 17:27","Mahia, LC-1B",MATS,50 kg,"585 km, 97.66SSO",SNSA&OHB Sweden,Success,Partial failure (aerial capture),2022-11-04 17:27:00
+33,"""Virginia Is For Launch Lovers""","24 January 2023, 23:00","MARS,LC-2",HawkEye 360 Cluster 6(3 satellites),40 kg,"550 km, 40.5LEO",HawkEye 360,Success,No attempt,2023-01-24 23:00:00
+34,"""Stronger Together""","16 March 2023, 22:39","MARS,LC-2","Capella 9, Capella 10",224 kg,"600 km, 44LEO",Capella Space,Success,No attempt,2023-03-16 22:39:00
+35,"""The Beat Goes On""","24 March 2023, 09:14","Mahia, LC-1B","BlackSky-18 Gen-2, BlackSky 19 Gen-2",120 kg,"450 km, 42LEO",BlackSky viaSpaceflight Inc.,Success,Success (Ocean landing),2023-03-24 09:14:00
+36,"""Rocket Like A Hurricane""","8 May 2023, 01:00","Mahia, LC-1B",TROPICS 2,10 kg,"550 km, 32LEO",NASA,Success,No attempt,2023-05-08 01:00:00
+37,"""Coming to a Storm Near You""","26 May 2023, 03:46","Mahia, LC-1B",TROPICS 2,10 kg,"550 km, 32LEO",NASA,Success,No attempt,2023-05-26 03:46:00
+39,"""Baby Come Back""","18 July 2023, 01:27","Mahia, LC-1B",LEO 3Lemur-2 2Starling  4,86 kg,"1000 km, 99.45SSO",TelesatSpire GlobalNASA,Success,Success (Ocean landing),2023-07-18 01:27:00
+40,"""We Love The Nightlife""","23 August 2023, 23:45","Mahia, LC-1B",Acadia 1,165 kg,"640 km, 53LEO",Capella Space,Success,Success (Ocean landing),2023-08-23 23:45:00
+41,"""We Will Never Desert You""","19 September 2023, 06:55","Mahia, LC-1B",Acadia 2,165 kg,"640 km, 53LEO",Capella Space,Failure,No attempt,2023-09-19 06:55:00
+42,"""The Moon God Awakens""","15 December 2023, 04:05","Mahia, LC-1B",QPS-SAR-5 (TSUKUYOMI-I),100 kg,"575 km, 42LEO",iQPS,Success,No attempt,2023-12-15 04:05:00
+43,"""Four Of A Kind""","31 January 2024, 06:34","Mahia, LC-1B",Skylark  4,112 kg,"530 km, 97LEO",Spire Globaland NorthStar Earth & Space,Success,Success (Ocean landing),2024-01-31 06:34:00
+44,"""On Closer Inspection""","18 February 2024, 14:52","Mahia, LC-1B",ADRAS-J,150 kg,"600 km, 98SSO",Astroscale,Success,No attempt,2024-02-18 14:52:00
+45,"""Owl Night Long""","12 March 2024, 15:03","Mahia, LC-1B",StriX-3,100 kg,"561 km, 97SSO",Synspective,Success,No attempt,2024-03-12 15:03:00
+46,"""Live and Let Fly""","21 March 2024, 07:25","MARS,LC-2",NROL-123 (4 Payloads),,LEO,National Reconnaissance Office(NRO),Success,No attempt,2024-03-21 07:25:00
+47,"""Beginning Of The Swarm""","23 April 2024, 22:32","Mahia, LC-1B",NeonSat-1ACS3,115 kg,"520 km Neonsat-1, 1.000km ACS3, 97SSO",KAISTNASA,Success,No attempt,2024-04-23 22:32:00
+48,"""Ready, Aim, PREFIRE""","25 May 2024, 07:41","Mahia, LC-1B",PREFIRE 1,15 kg,525 km 97.5SSO,NASA,Success,No attempt,2024-05-25 07:41:00
+49,"""PREFIRE And Ice""","5 June 2024, 03:15","Mahia, LC-1B",PREFIRE 2,15 kg,525 km 97.5SSO,NASA,Success,No attempt,2024-06-05 03:15:00
