@@ -1,239 +1,182 @@
-# RKLB Stock Prediction — Multi-Signal Ensemble
+# RKLB Stock Prediction
 
-**Rocket Lab USA (RKLB) | 4-Day Price Forecast + Directional Signal**
+A weekend project that spiralled into a full ML pipeline. Predicts Rocket Lab's
+4-day price direction using an ensemble of LightGBM, a BiLSTM with attention, and
+FinBERT sentiment analysis. Built to run on a laptop — no GPU needed.
 
-A production-structured ML pipeline that combines classical machine learning, deep learning, and financial NLP to forecast RKLB stock prices and generate trading signals.
+## What It Does
 
----
+Takes OHLCV data, Electron launch schedules, and financial news headlines, then
+spits out a 4-day price forecast plus a BUY/SELL/HOLD signal. The ensemble
+combines three models that think differently about the problem:
 
-## Architecture
+- **LightGBM** — gradient-boosted trees on 31 engineered features. Good at
+  capturing regime-independent patterns, especially with walk-forward validation.
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                     Data Sources                        │
-│  yfinance (OHLCV)  │  NewsAPI + Yahoo News  │  Launches │
-└────────┬───────────┴────────────┬───────────┴─────┬─────┘
-         │                       │                   │
-         ▼                       ▼                   ▼
-┌─────────────────┐   ┌──────────────────┐  ┌───────────────┐
-│ Technical Indic.│   │ FinBERT Sentiment│  │ Launch Events │
-│ RSI, MACD, ATR  │   │ (ProsusAI/finbert│  │ Success/Fail  │
-│ BBands, Momentum│   │  CPU-friendly)   │  │ Days since    │
-└────────┬────────┘   └────────┬─────────┘  └──────┬────────┘
-         │                     │                    │
-         └─────────────┬───────┴────────────────────┘
-                        │
-              ┌──────────▼──────────┐
-              │   Feature Matrix    │
-              │  (31 features/day)  │
-              └──────┬──────┬───────┘
-                     │      │
-         ┌───────────┘      └────────────┐
-         ▼                               ▼
-┌─────────────────┐           ┌────────────────────────┐
-│   LightGBM      │           │  LSTM + Multi-Head      │
-│   (ML Layer)    │           │  Attention (DL Layer)   │
-│                 │           │                         │
-│ Walk-forward CV │           │  BiLSTM → MH-Attention  │
-│ 4 price models  │           │  → LayerNorm + residual │
-│ + direction clf │           │  → return + dir heads   │
-└────────┬────────┘           └──────────┬──────────────┘
-         │                               │
-         └──────────────┬────────────────┘
-                         │
-               ┌──────────▼──────────┐
-               │  Ensemble Layer     │
-               │                     │
-               │ Weighted average    │
-               │ + Ridge meta-learner│
-               │ + sentiment bias    │
-               └──────────┬──────────┘
-                           │
-               ┌───────────▼──────────┐
-               │   Output             │
-               │ • 4-day price series │
-               │ • BUY / SELL / HOLD  │
-               └──────────────────────┘
-```
+- **BiLSTM + Multi-Head Attention** — a two-layer bidirectional LSTM that learns
+  temporal structure from 20-day sequences, with a self-attention layer that
+  decides which timesteps actually matter.
 
----
+- **FinBERT** — ProsusAI's financial BERT model scoring news sentiment. Runs on
+  CPU at about 1 second per headline. Cached to disk so you only pay the cost once.
 
-## Project Structure
+The base model predictions feed into a Ridge meta-learner that learns how much to
+trust each model based on what actually happened on held-out validation data.
+
+## Why % Returns Instead of Raw Prices
+
+This was the single biggest lesson from building this. Both models originally
+predicted raw dollar prices. That worked fine when RKLB traded between $4 and $17
+for two years. Then it went to $150 and everything broke — the LSTM checkpoint was
+still predicting numbers in the $60s.
+
+Both models now predict **percentage returns** and convert back to dollars at
+inference time. A 3% move is a 3% move whether the stock is $5 or $150. The
+`current_prices` parameter has to be passed everywhere for this to work — there
+are five separate places in the pipeline where forgetting it produces garbage
+output at a completely different scale. Ask me how I know.
+
+## Current Numbers (v3, June 2026)
+
+Test set: 149 trading days (Oct 2025 – May 2026). This period covers RKLB's run
+from ~$20 to $150 — a bull regime that barely existed in training data.
+
+| Model | d+1 MAE | d+4 MAE | Direction Acc |
+|---|---|---|---|
+| LSTM + Attention | $3.79 | $7.32 | 43.4% |
+| LightGBM | $4.04 | $8.34 | 43.6% |
+| Meta-Learner Ensemble | $4.31 | $8.78 | 44.2% |
+
+The direction accuracy is below 50% and I'm not going to pretend otherwise. The
+models trained on 2022–2025 price action — choppy, mean-reverting, mostly
+sideways — and then got tested on a momentum-driven bull run to all-time highs.
+The directional head hasn't seen this regime before. The price forecasts are
+decent (LSTM hit a $3.79 d+1 MAE on a $150 stock), but direction is basically
+noise right now. I stopped using it for signal generation in v3 and switched to
+price-derived signals instead. This should sort itself out as post-rally data
+accumulates in the training set.
+
+## Project Layout
 
 ```
 rocketlab-stock-prediction/
-├── config.py                    # All paths and hyperparameters
-├── requirements.txt
 ├── notebooks/
-│   └── demo.ipynb               # End-to-end showcase notebook
+│   └── demo.ipynb                 # The only thing you need to run
 ├── data/
-│   ├── fetch_price.py           # yfinance OHLCV (RKLB + NASDAQ)
-│   ├── fetch_news.py            # NewsAPI + yfinance headlines
-│   └── fetch_launches.py        # Electron launch event data
+│   ├── fetch_price.py             # yfinance OHLCV (RKLB + NASDAQ)
+│   ├── fetch_news.py              # NewsAPI + Yahoo Finance headlines
+│   ├── fetch_launches.py          # Electron launch history scraper
+│   ├── electron_launches.md       # Human-readable launch table
+│   └── electron_launches_clean.csv
 ├── features/
-│   ├── technical_indicators.py  # RSI, MACD, BBands, ATR, momentum
-│   ├── launch_features.py       # Launch event feature engineering
-│   └── preprocess.py            # Merge, scale, windowing, splits
+│   ├── technical_indicators.py    # RSI, MACD, Bollinger, ATR, momentum
+│   ├── launch_features.py         # Launch event features
+│   └── preprocess.py              # Merge, scale, sequence, split
 ├── models/
-│   ├── finbert_sentiment.py     # FinBERT NLP scoring + cache
-│   ├── lgbm_model.py            # LightGBM train/predict/evaluate
-│   └── lstm_attention.py        # PyTorch LSTM + MultiheadAttention
+│   ├── lgbm_model.py              # LightGBM: 4 regressors + walk-forward CV
+│   ├── lstm_attention.py          # PyTorch BiLSTM + MultiheadAttention
+│   └── finbert_sentiment.py       # FinBERT NLP with disk cache
 ├── ensemble/
-│   └── ensemble.py              # Weighted + meta-learner ensemble
-└── artifacts/                   # Saved model files (gitignored)
-    ├── lgbm_model.pkl
-    ├── lstm_model.pt
-    ├── meta_learner.pkl
-    ├── scaler.pkl
-    ├── feature_cols.pkl
-    └── sentiment_cache.pkl
+│   └── ensemble.py                # Weighted average + Ridge meta-learner
+├── config.py                      # Every hyperparameter in one place
+├── requirements.txt
+└── artifacts/                     # Saved models (gitignored, delete before retrain)
 ```
 
----
-
-## Techniques Used
-
-| Technique | Why |
-|-----------|-----|
-| **LightGBM** with walk-forward CV | Fast, interpretable, strong on tabular data; walk-forward CV prevents temporal leakage |
-| **Bidirectional LSTM** | Captures sequential dependencies in price time-series from both directions |
-| **Multi-Head Self-Attention** (`nn.MultiheadAttention`) | Lets the model focus on the most relevant timesteps, not just the last hidden state |
-| **FinBERT** (financial BERT) | Pre-trained for financial sentiment — far superior to rule-based VADER |
-| **RobustScaler** | Less sensitive to RKLB's high-volatility outliers than MinMaxScaler |
-| **Ridge meta-learner** | Learns optimal combination of base models on held-out validation data |
-| **% return targets (LSTM)** | Scale-invariant targets that remain valid as price level changes over time |
-| **Domain features** | Electron launch events as unique alpha signals not present in price data |
-
----
-
-## Setup
+## Setup & Running
 
 ```bash
 pip install -r requirements.txt
+echo "your-newsapi-key" > newsapi-key.txt
+rm -rf artifacts/*              # Clean slate — always before a fresh run
+jupyter notebook notebooks/demo.ipynb
 ```
 
-Add your NewsAPI key to `newsapi-key.txt` in the project root (one line, no quotes).
+First run downloads FinBERT (~440MB) and trains everything from scratch. Takes
+about 15–20 minutes on a laptop. Subsequent runs load cached artifacts and finish
+in seconds.
 
-**First run** — trains and saves all models to `artifacts/`.  
-**Subsequent runs** — loads saved artifacts, skips training.
-
-To force a full retrain (required after any code changes to model or feature logic):
+To force a full retrain after changing model or feature code:
 
 ```bash
-rm artifacts/lstm_model.pt artifacts/lgbm_model.pkl artifacts/meta_learner.pkl
+rm -rf artifacts/*
 ```
 
-Then re-run `demo.ipynb` top to bottom.
+Then re-run `demo.ipynb` top to bottom. The notebook is the only entry point —
+all the `.py` files are imported as library modules.
 
-```bash
-cd notebooks
-jupyter notebook demo.ipynb
-```
+## Design Choices Worth Mentioning
 
----
+**Strict chronological split.** 75% train, 10% validation, 15% test. No shuffling
+anywhere. You can't random-shuffle time series and pretend your test metrics mean
+anything.
 
-## Hardware Requirements
+**Walk-forward CV on train only.** LightGBM cross-validation runs on `train_df`
+exclusively. I originally ran CV on train+val combined and got artificially tight
+metrics — turns out the model had seen val-era data in some folds.
 
-Designed to run on a standard laptop (tested on Lenovo T14s):
-- **CPU-only** — no GPU required
-- ~8GB RAM sufficient
-- FinBERT inference: ~1s/headline on CPU
-- LSTM training: ~5–10 min on CPU
+**20-day lookback, not 60.** The longer window only produced ~680 training
+sequences. At 20 days you get ~2,040 — triple the data for the LSTM to learn
+from. 20 trading days is roughly a calendar month, which feels about right for
+capturing short-term momentum without dragging in ancient history.
 
----
+**Sentiment forward-fill capped at 3 days.** There are only about 17 days with
+actual FinBERT scores across nearly 1,000 trading days. Without a cap, a single
+bullish article from March would still be propping up sentiment scores in June.
+Beyond 3 days, sentiment defaults to zero.
 
-## Key Design Decisions
+**RobustScaler over MinMaxScaler.** RKLB has had multiple ±20% single-day moves.
+Median + IQR scaling handles those outliers without compressing the rest of the
+distribution into a sliver.
 
-### Train / Val / Test Split
-Data is split **strictly chronologically** — no shuffling at any stage.
+**LSTM loss = MSE(price returns) + 0.3 × BCE(direction).** Direction is an
+auxiliary task, not the main event. The 0.3 weight keeps it from dominating
+optimisation.
 
-| Split | Fraction | Purpose |
-|-------|----------|---------|
-| Train | 75% | Model training and walk-forward CV |
-| Val | 10% | Early stopping only — never used to measure accuracy |
-| Test | 15% | Final honest evaluation, never touched during training |
+## Hardware
 
-### LSTM Predicts % Returns, Not Raw Prices
-The LSTM outputs **percentage returns** (e.g. `+0.03` = up 3%) rather than raw dollar prices. This is a deliberate design choice for two reasons:
+Runs fine on a ThinkPad T14s with 8GB RAM. No GPU. The slowest part is FinBERT
+at ~1 second per headline, but results are cached so it's a one-time cost.
+LSTM trains in 5–10 minutes.
 
-1. **Scale invariance** — a model trained when RKLB traded at $5–$17 would produce nonsensical predictions when the stock later trades at $100+. Returns are always small numbers regardless of price level.
-2. **Stationarity** — raw prices drift over time (non-stationary), making them harder to learn from. Returns are much closer to stationary and generalise better.
+## Bugs I Fixed (So I Don't Make Them Again)
 
-The LSTM output is converted back to dollar prices at inference time:
-```
-predicted_price_d+h = current_price × (1 + predicted_return_d+h)
-```
+- **Data leakage in feature columns (Bug #10).** `target_return_d1..d4` columns
+  were leaking into the feature set. LightGBM direction accuracy was 100% because
+  it could trivially split on `target_return_d1 > 0`. Removed from the feature
+  column list.
 
-LightGBM continues to predict raw prices directly, as tree-based models handle non-stationarity more robustly.
+- **Meta-learner trained on mismatched scales (Bug #7).** LSTM predictions in
+  return-scale (~0.001) got fed to the Ridge meta-learner alongside LightGBM
+  predictions in dollar-scale (~$150). The meta-learner tried to blend 0.1% and
+  $150 and produced nonsense. Everything now flows through dollar conversion
+  before hitting the meta-learner.
 
-### Sentiment Forward-Fill Cap
-FinBERT sentiment scores are capped at **3-day forward-fill** after the scored date. Beyond 3 days, sentiment is set to zero. This prevents stale news from a single article being treated as a signal for weeks or months.
+- **LSTM checkpoint stale across price regimes (Bug #1).** The saved `lstm_model.pt`
+  was trained on $4–$17 RKLB. Loading those weights when the stock was at $150
+  gave predictions in the $60s. Fixed by switching to % return targets — but the
+  lesson is that model checkpoints have a shelf life.
 
-### Sequence Length
-The LSTM lookback window is **20 trading days** (~1 calendar month). A longer window of 60 days was found to produce too few training sequences (~680) given the dataset size, starving the LSTM of sufficient training data. 20 days yields ~2,040 sequences.
+- **LightGBM raw price targets (Bug #12).** Tree splits on absolute price levels
+  don't extrapolate. A model trained at $5–$25 couldn't handle testing at
+  $50–$150. Switched LGBM to % return targets to match the LSTM approach.
 
-### Signal Thresholds
-BUY/SELL signals are only triggered when the ensemble directional probability is **above 0.65 (BUY) or below 0.35 (SELL)**. The wide HOLD band (0.35–0.65) is intentional — with the inherent uncertainty in short-term price prediction, forcing a signal on marginal probabilities produces more noise than alpha.
+- **Sentiment propagating for months (Bug #4).** `ffill()` with no limit meant
+  one article's sentiment score survived for weeks. Capped at 3 days.
 
----
+Full bug tracker with 12 documented fixes in `CLAUDE.md`.
 
-## Results
+## To Do
 
-| Model | MAE d+1 | RMSE d+1 | Directional Accuracy |
-|-------|---------|----------|---------------------|
-| LightGBM | — | — | — |
-| LSTM + Attention | — | — | — |
-| Ensemble (weighted) | — | — | — |
-| Ensemble (meta-learner) | — | — | — |
-
-*Results populated after running `demo.ipynb` with a clean retrain.*
-
----
-
-## Changelog
-
-### v2 — Pipeline fixes (2026-05)
-
-A full audit of the pipeline identified and corrected the following issues:
-
-**Critical fixes**
-
-- **LSTM target changed from raw price to % return** (`features/preprocess.py`, `models/lstm_attention.py`)
-  — The original model predicted raw dollar prices, which became invalid as RKLB's price rose
-  significantly from the training era. The model now predicts percentage returns, which are
-  scale-invariant. `predict()` converts returns back to dollar prices using the current close.
-
-- **LSTM lookback reduced from 60 to 20 days** (`config.py`)
-  — A 60-day lookback on a ~1,000-row dataset produced only ~680 training sequences, far too
-  few for a deep learning model to learn meaningfully. Reducing to 20 days triples the sequence
-  count to ~2,040.
-
-- **Stale LSTM checkpoint invalidated** (`artifacts/lstm_model.pt`)
-  — The saved model weights were trained on the original $4–$17 price regime. Loading these
-  weights for inference against $100+ prices produced the observed ~50% underestimation in
-  live forecasts. The checkpoint must be deleted and the model retrained after applying the
-  return-target fix.
-
-**Moderate fixes**
-
-- **LightGBM training data leakage corrected** (`models/lgbm_model.py`)
-  — The original `train()` concatenated `train_df` and `val_df` before fitting, meaning the
-  final model had seen validation data before evaluation. The fix trains exclusively on
-  `train_df` and uses `val_df` only for early stopping. The previously reported $14 MAE was
-  artificially optimistic as a result.
-
-- **Sentiment forward-fill capped at 3 days** (`features/preprocess.py`)
-  — With only 14 days of real FinBERT scores across 988 trading days, unlimited `ffill()`
-  was propagating single article scores for weeks or months, creating spurious signal.
-  Forward-fill is now capped at `limit=3`; beyond that, sentiment defaults to zero.
-
-- **BUY/SELL signal thresholds widened** (`ensemble/ensemble.py`)
-  — Changed from `>0.60 / <0.40` to `>0.65 / <0.35`. With directional accuracy near the
-  coin-flip level (~47%), tight thresholds caused constant signal flipping on noise. The
-  wider HOLD band requires higher model confidence before committing to a direction.
-
----
+- Retrain after accumulating 3–6 more months of post-rally data to see if
+  directional accuracy recovers
+- Try adding macroeconomic indicators (interest rates, VIX) as features
+- Experiment with a proper backtesting framework instead of the current
+  train/val/test split
+- CI/CD pipeline for automated retraining on a schedule
 
 ## Disclaimer
 
-This project is for educational and research purposes only. Nothing in this repository constitutes financial advice. Past model performance does not guarantee future returns.
+This is a learning project. Nothing here is financial advice. Past performance —
+especially on a test set that barely overlaps with current market conditions —
+does not guarantee anything about future returns.
