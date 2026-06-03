@@ -1,0 +1,27 @@
+# Core data
+yfinance>=0.2.40
+pandas>=2.0
+numpy>=1.25
+requests>=2.31
+
+# ML
+lightgbm>=4.3
+scikit-learn>=1.4
+
+# DL
+torch>=2.2
+torchinfo>=1.8
+
+# NLP / sentiment
+transformers>=4.40
+sentencepiece>=0.1.99
+
+# Visualisation
+matplotlib>=3.8
+seaborn>=0.13
+mplfinance>=0.12
+
+# Utilities
+tqdm>=4.66
+joblib>=1.3
+python-dateutil>=2.9

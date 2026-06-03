@@ -21,6 +21,13 @@ logs/
 training_log.csv
 best_model.h5
 
+## Syncthing
+.stfolder/
+.stversions/
+
+## Claude
+.claude/
+
 ## OS
 .DS_Store
 Thumbs.db
