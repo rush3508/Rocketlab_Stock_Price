@@ -1,0 +1,26 @@
+## Secrets
+newsapi-key.txt
+
+## Model artifacts (large binary files — regenerate with demo.ipynb)
+artifacts/
+
+## Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+
+## Jupyter
+.ipynb_checkpoints/
+
+## Data outputs
+*.xlsx
+logs/
+training_log.csv
+best_model.h5
+
+## OS
+.DS_Store
+Thumbs.db
