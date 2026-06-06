@@ -67,6 +67,28 @@ def build_dataset(sentiment_df: pd.DataFrame | None = None) -> pd.DataFrame:
     return df
 
 
+def build_live_features(sentiment_df: pd.DataFrame | None = None) -> pd.DataFrame:
+    """
+    Feature matrix for live inference only — no target columns, no tail truncation.
+    Identical to build_dataset() but skips the forward-looking target computation
+    so the most recent trading days are included.
+    """
+    price_df = load_price_data(start=START_DATE)
+    df = build_all_indicators(price_df)
+    df = add_launch_features(df)
+
+    if sentiment_df is not None:
+        sentiment_df = sentiment_df[["sentiment_score"]].copy()
+        sentiment_df.index = pd.to_datetime(sentiment_df.index).normalize()
+        df = df.join(sentiment_df, how="left")
+        df["sentiment_score"] = df["sentiment_score"].ffill(limit=3).fillna(0.0)
+    else:
+        df["sentiment_score"] = 0.0
+
+    df.dropna(inplace=True)
+    return df
+
+
 def get_feature_columns(df: pd.DataFrame) -> list[str]:
     """Returns input feature column names (excludes targets and raw OHLCV)."""
     exclude = {
